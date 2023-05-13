@@ -7,6 +7,7 @@ let videosArray = document.querySelectorAll(".video");
 videosArray[0].controls = true;
 videosArray[0].autoplay = true;
 videosArray[0].muted = true;
+videosArray[0].loop = true;
 const addNewVideoBlogs = (link) => {
     let elVideo = document.createElement("video");
     let elSource = document.createElement("source");
