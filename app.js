@@ -4,6 +4,7 @@ const btn = document.querySelector("#btn");
 const listOfVideos = document.querySelector(".list-of-videos");
 const trash = document.querySelectorAll(".trash");
 let videosArray = document.querySelectorAll(".video");
+
 let linksArray = [];
 videosArray[0].controls = true;
 videosArray[0].autoplay = true;
@@ -30,6 +31,8 @@ const addNewVideoBlogs = (link) => {
         item.autoplay = true;
         item.loop = true;
     });
+
+    console.log(videosArray);
 };
 
 btn.addEventListener("click", () => {
