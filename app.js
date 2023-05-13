@@ -4,6 +4,7 @@ const btn = document.querySelector("#btn");
 const listOfVideos = document.querySelector(".list-of-videos");
 const trash = document.querySelectorAll(".trash");
 let videosArray = document.querySelectorAll(".video");
+let linksArray = [];
 videosArray[0].controls = true;
 videosArray[0].autoplay = true;
 videosArray[0].muted = true;
@@ -33,8 +34,18 @@ const addNewVideoBlogs = (link) => {
 
 btn.addEventListener("click", () => {
     let value = input.value;
+    let check;
     input.value = "";
-    addNewVideoBlogs(value);
+    check = linksArray.some((item) => {
+        return item === value && true;
+    });
+
+    if (check) {
+        alert("Bu video ro'yxatda bor");
+    } else {
+        linksArray.push(value);
+        addNewVideoBlogs(value);
+    }
 });
 
 listOfVideos.addEventListener("click", (e) => {
