@@ -2,6 +2,7 @@ const item = document.querySelector(".item");
 const input = document.querySelector("#input");
 const btn = document.querySelector("#btn");
 const listOfVideos = document.querySelector(".list-of-videos");
+const trash = document.querySelectorAll(".trash");
 let videosArray = document.querySelectorAll(".video");
 videosArray[0].autoplay = true;
 videosArray[0].controls = true;
@@ -10,7 +11,10 @@ const addNewVideoBlogs = (link) => {
     let elVideo = document.createElement("video");
     let elSource = document.createElement("source");
     let elLi = document.createElement("li");
+    let elTrash = document.createElement("span");
+    elTrash.className = "fa-regular fa-trash-can trash";
     elLi.className = "item";
+    elLi.append(elTrash);
     elVideo.className = "video";
 
     elSource.src = link;
@@ -30,4 +34,9 @@ btn.addEventListener("click", () => {
     let value = input.value;
     input.value = "";
     addNewVideoBlogs(value);
+});
+
+listOfVideos.addEventListener("click", (e) => {
+    let target = e.target;
+    target.className.includes("trash") && target.parentElement.remove();
 });
