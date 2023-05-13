@@ -4,9 +4,9 @@ const btn = document.querySelector("#btn");
 const listOfVideos = document.querySelector(".list-of-videos");
 const trash = document.querySelectorAll(".trash");
 let videosArray = document.querySelectorAll(".video");
-videosArray[0].autoplay = true;
 videosArray[0].controls = true;
-videosArray[0].loop = true;
+videosArray[0].autoplay = true;
+videosArray[0].muted = true;
 const addNewVideoBlogs = (link) => {
     let elVideo = document.createElement("video");
     let elSource = document.createElement("source");
