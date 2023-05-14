@@ -45,13 +45,18 @@ h1 {
   outline-offset: 3px;
   outline: 5px solid rgb(79, 206, 79);
 }
-.wrapper-input #btn {
+.wrapper-input .btn {
   padding: 10px 15px;
 }
-.wrapper-input #btn:hover {
+.wrapper-input .btn:hover {
   background-color: rgb(99, 211, 99);
   color: #fff;
   border: transparent;
+}
+.wrapper-input .warning {
+  background-color: #fff;
+  color: red;
+  border: 1px solid red;
 }
 
 .list-of-videos {

@@ -4,7 +4,7 @@ const btn = document.querySelector("#btn");
 const listOfVideos = document.querySelector(".list-of-videos");
 const trash = document.querySelectorAll(".trash");
 let videosArray = document.querySelectorAll(".video");
-
+const deleteAll = document.querySelector(".warning");
 let linksArray = [];
 videosArray[0].controls = true;
 videosArray[0].autoplay = true;
@@ -54,4 +54,8 @@ btn.addEventListener("click", () => {
 listOfVideos.addEventListener("click", (e) => {
     let target = e.target;
     target.className.includes("trash") && target.parentElement.remove();
+});
+
+deleteAll.addEventListener("click", () => {
+    listOfVideos.innerHTML = "";
 });

@@ -45,13 +45,19 @@ h1 {
         }
     }
 
-    #btn {
+    .btn {
         padding: 10px 15px;
         &:hover {
             background-color: rgb(99, 211, 99);
             color: #fff;
             border: transparent;
         }
+    }
+
+    .warning {
+        background-color: #fff;
+        color: red;
+        border: 1px solid red;
     }
 }
 
